@@ -16,9 +16,10 @@ const ToDoList = () => {
   };
 
   const handleDelete = (index) => {
-    const newTodo = [...todos];
-    newTodo?.splice(index, 1);
-    setTodos(newTodo);
+    // const newTodo = [...todos];
+    // newTodo?.splice(index, 1);
+    // setTodos(newTodo);
+    setTodos((prev) => prev.filter((todo, idx) => idx !== index)); //efficient deletion
   };
 
   return (
